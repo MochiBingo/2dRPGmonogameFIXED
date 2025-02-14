@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/Mason/source/repos/2dRPGmonogameFIXED/2dRPGmonogameFIXED/Content/tile_0000.png</File>
+    <File>C:/Users/Mason/source/repos/2dRPGmonogameFIXED/2dRPGmonogameFIXED/Content/tile_0005.png</File>
+    <File>C:/Users/Mason/source/repos/2dRPGmonogameFIXED/2dRPGmonogameFIXED/Content/tile_0094.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File>ground1.png</File>
+    <File>tree1.png</File>
+    <File>player.png</File>
+  </DestFiles>
+</SourceFileCollection>
