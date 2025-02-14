@@ -26,3 +26,4 @@ C:\Users\Mason\source\repos\2dRPGmonogameFIXED\2dRPGmonogameFIXED\obj\Debug\net6
 C:\Users\Mason\source\repos\2dRPGmonogameFIXED\2dRPGmonogameFIXED\bin\Debug\net6.0\Content\ground1.xnb
 C:\Users\Mason\source\repos\2dRPGmonogameFIXED\2dRPGmonogameFIXED\bin\Debug\net6.0\Content\player.xnb
 C:\Users\Mason\source\repos\2dRPGmonogameFIXED\2dRPGmonogameFIXED\bin\Debug\net6.0\Content\tree1.xnb
+C:\Users\Mason\source\repos\2dRPGmonogameFIXED\2dRPGmonogameFIXED\obj\Debug\net6.0\2dRPGmonogameFIXED.sourcelink.json

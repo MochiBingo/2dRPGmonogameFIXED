@@ -10,16 +10,11 @@ namespace _2dRPGmonogameFIXED
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private player player;
-        private int sizeX = 15;
-        private int sizeY = 10;
-        private bool canWalk;
-        private bool isExit;
+        private map map;
         public Random rand = new Random();
         public GraphicsDeviceManager Graphics { get { return _graphics; } }
         public SpriteBatch Spritebatch { get { return _spriteBatch; } }
 
-        private Texture2D ground;
-        private Texture2D tree;
 
         public Game1()
         {
@@ -27,14 +22,10 @@ namespace _2dRPGmonogameFIXED
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
         }
-
-        protected void GenerateMap()
-        {
-
-        }
         protected override void Initialize()
         {
             player = new player(this, new Vector2(100, 100));
+            map = new map(this);
 
             base.Initialize();
         }
@@ -42,8 +33,7 @@ namespace _2dRPGmonogameFIXED
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            ground = this.Content.Load<Texture2D>("ground1");
-            tree = this.Content.Load<Texture2D>("tree1");
+
             // TODO: use this.Content to load your game content here
         }
 
@@ -82,19 +72,19 @@ namespace _2dRPGmonogameFIXED
 
             if (kstate.IsKeyDown(Keys.W))
             {
-                UpdatePosition(0, 1);
+                UpdatePosition(0, -3);
             }
             if (kstate.IsKeyDown(Keys.S))
             {
-                UpdatePosition(0, -1);
+                UpdatePosition(0, 3);
             }
             if (kstate.IsKeyDown(Keys.D))
             {
-                UpdatePosition(1, 0);
+                UpdatePosition(3, 0);
             }
             if (kstate.IsKeyDown(Keys.A))
             {
-                UpdatePosition(-1, 0);
+                UpdatePosition(-3, 0);
             }
         }
         public void Draw()
@@ -103,7 +93,31 @@ namespace _2dRPGmonogameFIXED
         }
         public void UpdatePosition(int x, int y)
         {
+            position += new Vector2(x, y);
+        }
+    }
+    public class map
+    {
+        private Texture2D ground;
+        private Texture2D tree1;
+        protected Game1 game1;
+        private int sizeX = 15;
+        private int sizeY = 10;
+        private bool canWalk;
+        private bool isExit;
 
+        public map(Game1 game)
+        {
+            game1 = game;
+            ground = game.Content.Load<Texture2D>("ground1");
+            tree1 = game.Content.Load<Texture2D>("tree1");
+        }
+        public void Draw()
+        {
+
+        }
+        protected void GenerateMap()
+        {
         }
     }
 }
