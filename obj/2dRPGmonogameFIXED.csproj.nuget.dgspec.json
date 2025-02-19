@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mason\\source\\repos\\2dRPGmonogameFIXED\\2dRPGmonogameFIXED\\2dRPGmonogameFIXED.csproj": {}
+    "C:\\Users\\W0476692\\source\\repos\\2dRPGmonogameFIXED\\2dRPGmonogameFIXED.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mason\\source\\repos\\2dRPGmonogameFIXED\\2dRPGmonogameFIXED\\2dRPGmonogameFIXED.csproj": {
+    "C:\\Users\\W0476692\\source\\repos\\2dRPGmonogameFIXED\\2dRPGmonogameFIXED.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mason\\source\\repos\\2dRPGmonogameFIXED\\2dRPGmonogameFIXED\\2dRPGmonogameFIXED.csproj",
+        "projectUniqueName": "C:\\Users\\W0476692\\source\\repos\\2dRPGmonogameFIXED\\2dRPGmonogameFIXED.csproj",
         "projectName": "2dRPGmonogameFIXED",
-        "projectPath": "C:\\Users\\Mason\\source\\repos\\2dRPGmonogameFIXED\\2dRPGmonogameFIXED\\2dRPGmonogameFIXED.csproj",
-        "packagesPath": "C:\\Users\\Mason\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mason\\source\\repos\\2dRPGmonogameFIXED\\2dRPGmonogameFIXED\\obj\\",
+        "projectPath": "C:\\Users\\W0476692\\source\\repos\\2dRPGmonogameFIXED\\2dRPGmonogameFIXED.csproj",
+        "packagesPath": "C:\\Users\\W0476692\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\W0476692\\source\\repos\\2dRPGmonogameFIXED\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mason\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\W0476692\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("2dRPGmonogameFIXED")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+637a0b8668132e11168ecc38235836df0f572f12")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c325bd6a8a5801e022056d4ecc9ace06711c1e3")]
 [assembly: System.Reflection.AssemblyProductAttribute("2dRPGmonogameFIXED")]
 [assembly: System.Reflection.AssemblyTitleAttribute("2dRPGmonogameFIXED")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

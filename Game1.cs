@@ -8,7 +8,7 @@ namespace _2dRPGmonogameFIXED
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
-        private SpriteBatch _spriteBatch;
+        private static SpriteBatch _spriteBatch;
         private player player;
         private map map;
         public Random rand = new Random();
@@ -22,11 +22,18 @@ namespace _2dRPGmonogameFIXED
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
         }
+        public static Texture2D square;
+        private bob mybob;
+        private bob mybob2;
         protected override void Initialize()
         {
+            square = new Texture2D(GraphicsDevice, 1, 1);
+            square.SetData(new[] { Color.White });
             player = new player(this, new Vector2(100, 100));
             map = new map(this);
-
+            mybob = new bob(new Vector2(50, 50), Color.PeachPuff);
+            mybob2 = new bob(new Vector2(150, 150), Color.Orange);
+            mybob.myWeapon.weaponColor = Color.Green;
             base.Initialize();
         }
 
@@ -43,12 +50,25 @@ namespace _2dRPGmonogameFIXED
 
             player.Update(deltaTime);
         }
-
+        public static void EasyDraw(float positionX, float positionY, Color color)
+        {
+            _spriteBatch.Draw(square, new Rectangle((int)positionX, (int)positionY, 50, 50), color);
+        }
+        public static void EasyDraw(float positionX, float positionY, float scaleX, float scaleY, Color color)
+        {
+            _spriteBatch.Draw(square, new Rectangle((int)positionX, (int)positionY, (int)scaleX, (int)scaleY), color);
+        }
+        public static void EasyDraw(IDrawable drawable)
+        {
+            _spriteBatch.Draw(square, new Rectangle((int)drawable.Position.X, (int)drawable.Position.Y, (int)drawable.Scale.X, (int)drawable.Scale.Y), drawable.DrawColor);
+        }
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             _spriteBatch.Begin();
             player.Draw();
+            mybob.Draw(_spriteBatch);
+            mybob2.Draw(_spriteBatch);
             _spriteBatch.End();
             // TODO: Add your drawing code here
 
@@ -119,5 +139,43 @@ namespace _2dRPGmonogameFIXED
         protected void GenerateMap()
         {
         }
+    }
+    public class bob : IDrawable
+    {
+        public Vector2 Position { get; set; }
+        public Vector2 Scale { get; set; }
+        public Color DrawColor { get; set; }
+
+        public weapon myWeapon;
+        public bob(Vector2 newPosition, Color newColor)
+        {
+            Position = newPosition;
+            DrawColor = newColor;
+            Scale = new Vector2(50, 50);
+            myWeapon = new weapon();
+            myWeapon.owner = this;
+        }
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            Game1.EasyDraw(this);
+            Position = new Vector2(Position.X + 1, Position.Y);
+            myWeapon.Draw(spriteBatch);
+        }
+    }
+    public class weapon 
+    {
+        public bob owner;
+        public Color weaponColor = Color.Red;
+        public void Draw(SpriteBatch spritebatch)
+        {
+            spritebatch.Draw(Game1.square, new Rectangle((int)owner.Position.X + 22, (int)owner.Position.Y, 35, 8), weaponColor);
+            spritebatch.Draw(Game1.square, new Rectangle((int)owner.Position.X, (int)owner.Position.Y - 20, 50, 22), weaponColor);
+        }
+    }
+    public interface IDrawable
+    {
+        public Vector2 Position { get; set; }
+        public Vector2 Scale { get; set; }
+        public Color DrawColor { get; set; }
     }
 }
